@@ -30,16 +30,16 @@ RAG/
 └── README.md             # Dokumentasi proyek
 ```
 
-1. Prasyarat
+### 1. Prasyarat
 Pastikan Anda sudah menginstal Python 3.10+ di sistem Anda.
 
-2. Clone Repository
+### 2. Clone Repository
 ```bash
 git clone [https://github.com/Retr0desk/RAG-Research-Assistant.git](https://github.com/Retr0desk/RAG-Research-Assistant.git)
 cd RAG-Research-Assistant
 ```
 
-3. Buat & Aktifkan Virtual Environment
+### 3. Buat & Aktifkan Virtual Environment
 ```bash
 # Windows (PowerShell)
 python -m venv .venv
@@ -50,31 +50,31 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-4. Install Dependensi
+### 4. Install Dependensi
 ```bash
 pip install langchain langchain-community langchain-huggingface langchain-chroma langchain-text-splitters python-dotenv bs4 pypdf
 ```
 
-6. Konfigurasi Environment Variable
+### 5. Konfigurasi Environment Variable
 Salin file .env.example menjadi .env:
 ```bash
 cp .env.example .env
 ```
 
 💡 Cara Penggunaan
-1. Ingesti Dokumen
+### 1. Ingesti Dokumen
 Simpan file dokumen/riset Anda di dalam folder data/, lalu jalankan script pembuatan database vektor:
 ```bash
 python create_database.py
 ```
 
-3. Jalankan Chatbot Tanya-Jawab
+### 2. Jalankan Chatbot Tanya-Jawab
 Mulai sesi interaktif tanya-jawab berdasarkan dokumen yang sudah di-ingest:
 ```bash
 python chat.py
 ```
 
-5. Eksperimen Agen
+### 3. Eksperimen Agen
 Untuk menjalankan alur RAG berbasis agen dengan dynamic prompt:
 ```bash
 python app.py
