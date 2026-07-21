@@ -28,15 +28,19 @@ RAG/
 ├── chat.py               # Interface CLI untuk tanya-jawab dokumen
 ├── create_database.py    # Script untuk memotong dokumen & membangun indeks ChromaDB
 └── README.md             # Dokumentasi proyek
+```
 
 1. Prasyarat
 Pastikan Anda sudah menginstal Python 3.10+ di sistem Anda.
 
 2. Clone Repository
+```bash
 git clone [https://github.com/Retr0desk/RAG-Research-Assistant.git](https://github.com/Retr0desk/RAG-Research-Assistant.git)
 cd RAG-Research-Assistant
+```
 
 3. Buat & Aktifkan Virtual Environment
+```bash
 # Windows (PowerShell)
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -44,24 +48,34 @@ python -m venv .venv
 # Linux / macOS
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 4. Install Dependensi
+```bash
 pip install langchain langchain-community langchain-huggingface langchain-chroma langchain-text-splitters python-dotenv bs4 pypdf
+```
 
-5. Konfigurasi Environment Variable
+6. Konfigurasi Environment Variable
 Salin file .env.example menjadi .env:
+```bash
 cp .env.example .env
-
+```
 
 💡 Cara Penggunaan
 1. Ingesti Dokumen
 Simpan file dokumen/riset Anda di dalam folder data/, lalu jalankan script pembuatan database vektor:
+```bash
 python create_database.py
+```
 
-2. Jalankan Chatbot Tanya-Jawab
+3. Jalankan Chatbot Tanya-Jawab
 Mulai sesi interaktif tanya-jawab berdasarkan dokumen yang sudah di-ingest:
+```bash
 python chat.py
+```
 
-3. Eksperimen Agen
+5. Eksperimen Agen
 Untuk menjalankan alur RAG berbasis agen dengan dynamic prompt:
+```bash
 python app.py
+```
